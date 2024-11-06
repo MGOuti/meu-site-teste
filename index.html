@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing Page - Exemplo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <div class="conteudo-centralizado cabecalho-conteudo">
+            <img src="https://via.placeholder.com/150x50" alt="Logo" class="logo">
+            <nav class="navegacao">
+                <ul class="menu">
+                    <li><a href="#home" class="link">Início</a></li>
+                    <li><a href="#sobre" class="link">Sobre</a></li>
+                    <li><a href="#produtos" class="link">Produtos</a></li>
+                    <li><a href="#depoimentos" class="link">Depoimentos</a></li>
+                    <li><a href="#contato" class="link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Principal -->
+    <section class="secao-principal" id="home">
+        <div class="conteudo-centralizado">
+            <h1 class="titulo-principal">Bem-vindo à nossa Landing Page!</h1>
+            <p class="descricao">Descubra nossos produtos e serviços exclusivos.</p>
+            <a href="#sobre" class="botao-cta">Saiba mais</a>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section class="secao-sobre" id="sobre">
+        <div class="conteudo-centralizado">
+            <h2 class="titulo-sobre">Sobre nós</h2>
+            <p class="descricao-sobre">Somos uma empresa dedicada a oferecer soluções inovadoras para o seu negócio. Nossa missão é transformar suas necessidades em resultados concretos.</p>
+            <div class="beneficios">
+                <div class="beneficio">
+                    <img src="https://via.placeholder.com/50" alt="Benefício 1">
+                    <h3>Inovação</h3>
+                    <p>Buscamos sempre as soluções mais inovadoras para o mercado.</p>
+                </div>
+                <div class="beneficio">
+                    <img src="https://via.placeholder.com/50" alt="Benefício 2">
+                    <h3>Compromisso</h3>
+                    <p>Estamos comprometidos com o sucesso do seu negócio.</p>
+                </div>
+                <div class="beneficio">
+                    <img src="https://via.placeholder.com/50" alt="Benefício 3">
+                    <h3>Qualidade</h3>
+                    <p>Entregamos apenas o melhor para nossos clientes.</p>
+                </div>
+            </div>
+            <a href="#contato" class="botao-cta">Entre em contato</a>
+        </div>
+    </section>
+
+    <!-- Seção Produtos -->
+    <section class="secao-produtos" id="produtos">
+        <div class="conteudo-centralizado">
+            <h2 class="titulo-produtos">Nossos Produtos</h2>
+            <div class="produtos">
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200" alt="Produto 1" class="imagem-produto">
+                    <h3 class="nome-produto">Produto 1</h3>
+                    <p class="descricao-produto">Descrição curta do produto 1. Ideal para suas necessidades.</p>
+                    <a href="#" class="botao-cta">Saiba mais</a>
+                </div>
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200" alt="Produto 2" class="imagem-produto">
+                    <h3 class="nome-produto">Produto 2</h3>
+                    <p class="descricao-produto">Descrição curta do produto 2. Perfeito para otimizar seu tempo.</p>
+                    <a href="#" class="botao-cta">Saiba mais</a>
+                </div>
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200" alt="Produto 3" class="imagem-produto">
+                    <h3 class="nome-produto">Produto 3</h3>
+                    <p class="descricao-produto">Descrição curta do produto 3. A solução ideal para você.</p>
+                    <a href="#" class="botao-cta">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Depoimentos -->
+    <section class="secao-depoimentos" id="depoimentos">
+        <div class="conteudo-centralizado">
+            <h2 class="titulo-depoimentos">O que nossos clientes dizem</h2>
+            <div class="depoimentos">
+                <div class="depoimento">
+                    <p class="texto-depoimento">"A experiência foi incrível! O atendimento foi excepcional e o produto atendeu todas as minhas expectativas. Recomendo fortemente!"</p>
+                    <p class="nome-cliente">João Silva</p>
+                    <p class="cargo-cliente">Empresário</p>
+                </div>
+                <div class="depoimento">
+                    <p class="texto-depoimento">"Desde que comecei a usar o serviço, meu negócio cresceu 30%. A solução foi perfeita para as nossas necessidades!"</p>
+                    <p class="nome-cliente">Maria Oliveira</p>
+                    <p class="cargo-cliente">Gerente de Marketing</p>
+                </div>
+                <div class="depoimento">
+                    <p class="texto-depoimento">"Eu nunca pensei que uma ferramenta poderia ser tão eficaz. Sem dúvida, a melhor decisão que tomei!"</p>
+                    <p class="nome-cliente">Carlos Pereira</p>
+                    <p class="cargo-cliente">Consultor Financeiro</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section class="secao-contato" id="contato">
+        <div class="conteudo-centralizado">
+            <h2 class="titulo-contato">Fale Conosco</h2>
+            <p class="descricao-contato">Tem alguma dúvida ou deseja saber mais? Entre em contato conosco agora!</p>
+            <form action="envio_contato.php" method="POST" class="form-contato">
+                <input type="text" name="nome" placeholder="Seu nome" class="campo-input" required>
+                <input type="email" name="email" placeholder="Seu email" class="campo-input" required>
+                <textarea name="mensagem" placeholder="Sua mensagem" class="campo-textarea" required></textarea>
+                <button type="submit" class="botao-enviar">Enviar mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="conteudo-centralizado rodape-conteudo">
+            <div class="informacoes">
+                <img src="https://via.placeholder.com/150x50" alt="Logo" class="logo-rodape">
+                <div class="contato-rodape">
+                    <p><strong>Endereço:</strong> Rua Exemplo, 123, Cidade, Estado</p>
+                    <p><strong>Email:</strong> contato@empresa.com</p>
+                    <p><strong>Telefone:</strong> (11) 1234-5678</p>
+                </div>
+            </div>
+            <div class="links-rodape">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

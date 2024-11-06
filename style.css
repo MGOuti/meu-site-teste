@@ -1,0 +1,450 @@
+/* Definindo variáveis para cores, fontes e espaçamento */
+:root {
+    --cor1: #ff6347; /* Vermelho */
+    --cor2: #28a745; /* Verde */
+    --cor3: #007bff; /* Azul */
+    --cor4: #003366; /* Azul escuro */
+    --cor5: #f9f9f9; /* Cinza claro */
+    --cor6: #333333; /* Cinza escuro */
+    --cor7: #ffffff; /* Branco */
+    --cor8: #666666; /* Cinza médio */
+    --cor9: #f4f4f4; /* Fundo leve */
+    --cor10: #bbb; /* Cinza claro para texto */
+    --cor11: #0056b3; /* Azul mais escuro para hover */
+    
+    /* Fontes */
+    --fonte-principal: 'Arial', sans-serif;
+    --fonte-secundaria: 'Verdana', sans-serif;
+
+    /* Tamanhos de fonte */
+    --tamanho-titulo: 2.5rem;
+    --tamanho-titulo-pequeno: 1.5rem;
+    --tamanho-texto: 1rem;
+    --tamanho-texto-pequeno: 0.875rem;
+
+    /* Peso de fonte */
+    --peso-titulo: 600;
+    --peso-texto: 400;
+    --peso-strong: 700;
+
+    /* Espaçamento */
+    --espaco-vertical: 20px;
+    --espaco-horizontal: 20px;
+}
+
+/* Reset de estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    line-height: 1.6;
+    background-color: var(--cor9);
+    color: var(--cor8);
+}
+
+/* Container centralizado com largura máxima */
+.conteudo-centralizado {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espaco-horizontal);
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: var(--cor6);
+    color: var(--cor7);
+    padding: var(--espaco-vertical) 0;
+}
+
+.cabecalho-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+.navegacao {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--cor7);
+    font-weight: var(--peso-strong);
+    text-transform: uppercase;
+    font-size: var(--tamanho-texto-pequeno);
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--cor1);
+}
+
+/* Seção Principal */
+.secao-principal {
+    background: linear-gradient(to bottom, var(--cor4), var(--cor3));
+    color: var(--cor7);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.titulo-principal {
+    font-size: 3rem;
+    font-weight: var(--peso-strong);
+    margin-bottom: var(--espaco-vertical);
+}
+
+.descricao {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.botao-cta {
+    background-color: var(--cor1);
+    color: var(--cor7);
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: var(--tamanho-texto);
+    font-weight: var(--peso-strong);
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-cta:hover {
+    background-color: var(--cor11);
+}
+
+/* Seção Sobre */
+.secao-sobre {
+    background-color: var(--cor7);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.titulo-sobre {
+    font-size: var(--tamanho-titulo);
+    font-weight: var(--peso-strong);
+    color: var(--cor6);
+    margin-bottom: var(--espaco-vertical);
+}
+
+.descricao-sobre {
+    font-size: var(--tamanho-texto);
+    color: var(--cor8);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.beneficios {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.beneficio {
+    width: calc(33.333% - 20px);
+    background-color: var(--cor7);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.beneficio img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.beneficio h3 {
+    font-size: 1.3rem;
+    color: var(--cor6);
+}
+
+.beneficio p {
+    color: var(--cor8);
+}
+
+/* Seção Produtos */
+.secao-produtos {
+    background-color: var(--cor5);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.titulo-produtos {
+    font-size: var(--tamanho-titulo);
+    font-weight: var(--peso-strong);
+    color: var(--cor6);
+    margin-bottom: 40px;
+}
+
+.produtos {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.produto {
+    background-color: var(--cor7);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    text-align: center;
+}
+
+.imagem-produto {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.nome-produto {
+    font-size: 1.3rem;
+    font-weight: var(--peso-strong);
+    color: var(--cor6);
+    margin-bottom: 10px;
+}
+
+.descricao-produto {
+    font-size: var(--tamanho-texto);
+    color: var(--cor8);
+    margin-bottom: 15px;
+}
+
+.botao-cta {
+    background-color: var(--cor3);
+    color: var(--cor7);
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: var(--tamanho-texto);
+    font-weight: var(--peso-strong);
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-cta:hover {
+    background-color: var(--cor11);
+}
+
+/* Seção Depoimentos */
+.secao-depoimentos {
+    background-color: var(--cor5);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.titulo-depoimentos {
+    font-size: var(--tamanho-titulo);
+    font-weight: var(--peso-strong);
+    color: var(--cor6);
+    margin-bottom: 40px;
+}
+
+.depoimentos {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.depoimento {
+    background-color: var(--cor7);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    text-align: center;
+}
+
+.texto-depoimento {
+    font-size: var(--tamanho-texto);
+    color: var(--cor6);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.nome-cliente {
+    font-size: 1.2rem;
+    font-weight: var(--peso-strong);
+    color: var(--cor4);
+}
+
+.cargo-cliente {
+    font-size: var(--tamanho-texto-pequeno);
+    color: var(--cor8);
+}
+
+/* Seção Contato */
+.secao-contato {
+    background-color: var(--cor9);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.titulo-contato {
+    font-size: var(--tamanho-titulo);
+    font-weight: var(--peso-strong);
+    color: var(--cor6);
+    margin-bottom: var(--espaco-vertical);
+}
+
+.descricao-contato {
+    font-size: var(--tamanho-texto);
+    color: var(--cor8);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--cor7);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.campo-input, .campo-textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: var(--tamanho-texto);
+    color: var(--cor6);
+    background-color: var(--cor9);
+    transition: border-color 0.3s ease;
+}
+
+.campo-input:focus, .campo-textarea:focus {
+    border-color: var(--cor2);
+    outline: none;
+}
+
+.campo-textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.botao-enviar {
+    background-color: var(--cor3);
+    color: var(--cor7);
+    padding: 15px 30px;
+    font-size: var(--tamanho-texto);
+    font-weight: var(--peso-strong);
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-enviar:hover {
+    background-color: var(--cor11);
+}
+
+/* Rodapé */
+.rodape {
+    background-color: var(--cor6);
+    color: var(--cor7);
+    text-align: center;
+    padding: 20px 0;
+    font-size: var(--tamanho-texto);
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-rodape {
+    width: 150px;
+}
+
+.contato-rodape {
+    font-size: var(--tamanho-texto);
+    color: var(--cor7);
+    text-align: left;
+}
+
+.links-rodape ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.links-rodape a {
+    text-decoration: none;
+    color: var(--cor7);
+    font-size: var(--tamanho-texto);
+    font-weight: var(--peso-strong);
+    transition: color 0.3s ease;
+}
+
+.links-rodape a:hover {
+    color: var(--cor1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cabecalho-conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navegacao {
+        margin-top: var(--espaco-vertical);
+    }
+
+    .produtos {
+        flex-direction: column;
+    }
+
+    .produto {
+        width: 100%;
+        margin-bottom: var(--espaco-vertical);
+    }
+
+    .depoimentos {
+        flex-direction: column;
+    }
+
+    .depoimento {
+        width: 100%;
+        margin-bottom: var(--espaco-vertical);
+    }
+
+    .form-contato {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
